@@ -1,0 +1,54 @@
+name: Daily job check
+
+on:
+  schedule:
+    # 03:17 UTC = 08:47 IST. GitHub cron runs in UTC, and runs at :00 are often
+    # delayed by load, so an off-peak minute is used.
+    - cron: "17 3 * * *"
+  workflow_dispatch:   # adds a "Run workflow" button for manual runs
+
+permissions:
+  contents: write      # commit data/ back to the repo
+  issues: write        # open the daily alert issue
+
+concurrency:
+  group: job-watcher
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run watcher
+        env:
+          ALERT_GITHUB_ISSUE: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+        run: python -m job_watcher.main
+
+      - name: Commit updated state
+        run: |
+          git config user.name "job-watcher-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No state changes."
+          else
+            git commit -m "data: daily run $(date -u +%Y-%m-%d)"
+            git push
+          fi

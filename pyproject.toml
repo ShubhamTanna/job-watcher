@@ -1,0 +1,10 @@
+[project]
+name = "job-watcher"
+version = "1.0.0"
+description = "Daily watcher for company job portals with filtering, de-duplication and alerts"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31", "PyYAML>=6.0", "beautifulsoup4>=4.12"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
+testpaths = ["tests"]

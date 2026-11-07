@@ -1,0 +1,190 @@
+{
+ "jobs": [
+  {
+   "data": {
+    "slug": "31533",
+    "req_id": "31533",
+    "title": "Decision Analytics Associate Consultant- Digital Customer Experience",
+    "full_location": "Princeton, New Jersey; Philadelphia, Pennsylvania; New York, New York; Boston, Massachusetts; South San Francisco, California",
+    "short_location": "Princeton, New Jersey",
+    "location_name": "Princeton",
+    "country": "United States",
+    "additional_locations": [
+     {
+      "location_name": "Philadelphia",
+      "city": "Philadelphia",
+      "country": "United States"
+     },
+     {
+      "location_name": "New York",
+      "city": "New York",
+      "country": "United States"
+     },
+     {
+      "location_name": "Boston",
+      "city": "Boston",
+      "country": "United States"
+     },
+     {
+      "location_name": "South San Francisco",
+      "city": "South San Francisco",
+      "country": "United States"
+     }
+    ],
+    "posted_date": "2026-11-06T21:44:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "67327",
+    "req_id": "67327",
+    "title": "Business Systems Analyst",
+    "full_location": "Evanston, Illinois",
+    "short_location": "Evanston, Illinois",
+    "location_name": "Evanston",
+    "country": "United States",
+    "additional_locations": null,
+    "posted_date": "2026-11-06T21:21:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "63318",
+    "req_id": "63318",
+    "title": "Market Research Associate Consultant",
+    "full_location": "Evanston, Illinois",
+    "short_location": "Evanston, Illinois",
+    "location_name": "Evanston",
+    "country": "United States",
+    "additional_locations": null,
+    "posted_date": "2026-11-06T21:15:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "67465",
+    "req_id": "67465",
+    "title": "Strategy R&D Consultant",
+    "full_location": "South San Francisco, California",
+    "short_location": "South San Francisco, California",
+    "location_name": "South San Francisco",
+    "country": "United States",
+    "additional_locations": null,
+    "posted_date": "2026-11-06T21:10:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "68014",
+    "req_id": "68014",
+    "title": "Senior Analyst - Governance, Risk & Compliance",
+    "full_location": "Princeton, New Jersey",
+    "short_location": "Princeton, New Jersey",
+    "location_name": "Princeton",
+    "country": "United States",
+    "additional_locations": null,
+    "posted_date": "2026-11-06T21:08:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "63691",
+    "req_id": "63691",
+    "title": "Strategic Alliances - AWS Partner Development Specialist",
+    "full_location": "Bellevue, Washington; Chicago, Illinois; South San Francisco, California",
+    "short_location": "Bellevue, Washington",
+    "location_name": "Seattle",
+    "country": "United States",
+    "additional_locations": [
+     {
+      "location_name": "Chicago",
+      "city": "Chicago",
+      "country": "United States"
+     },
+     {
+      "location_name": "South San Francisco",
+      "city": "South San Francisco",
+      "country": "United States"
+     }
+    ],
+    "posted_date": "2026-11-06T21:05:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "63690",
+    "req_id": "63690",
+    "title": "Strategic Alliances Senior Associate - Data partners",
+    "full_location": "Bellevue, Washington; South San Francisco, California; Chicago, Illinois",
+    "short_location": "Bellevue, Washington",
+    "location_name": "Seattle",
+    "country": "United States",
+    "additional_locations": [
+     {
+      "location_name": "South San Francisco",
+      "city": "South San Francisco",
+      "country": "United States"
+     },
+     {
+      "location_name": "Chicago - Merchandise Mart",
+      "city": "Chicago",
+      "country": "United States"
+     }
+    ],
+    "posted_date": "2026-11-06T21:03:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "23338",
+    "req_id": "23338",
+    "title": "Strategic Alliances Specialist",
+    "full_location": "South San Francisco, California; Bellevue, Washington; Thousand Oaks, California",
+    "short_location": "South San Francisco, California",
+    "location_name": "South San Francisco",
+    "country": "United States",
+    "additional_locations": [
+     {
+      "location_name": "Seattle",
+      "city": "Bellevue",
+      "country": "United States"
+     },
+     {
+      "location_name": "Los Angeles",
+      "city": "Thousand Oaks",
+      "country": "United States"
+     }
+    ],
+    "posted_date": "2026-11-06T21:01:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "69542",
+    "req_id": "69542",
+    "title": "Associate Consultant - Customer Models & Motivation",
+    "full_location": "Princeton, New Jersey",
+    "short_location": "Princeton, New Jersey",
+    "location_name": "Princeton",
+    "country": "United States",
+    "additional_locations": null,
+    "posted_date": "2026-11-06T20:52:00+0000"
+   }
+  },
+  {
+   "data": {
+    "slug": "69501",
+    "req_id": "69501",
+    "title": "Administrative Assistant",
+    "full_location": "Chicago, Illinois",
+    "short_location": "Chicago, Illinois",
+    "location_name": "Chicago - Merchandise Mart",
+    "country": "United States",
+    "additional_locations": null,
+    "posted_date": "2026-11-06T20:38:00+0000"
+   }
+  }
+ ],
+ "totalCount": 10,
+ "count": 10
+}

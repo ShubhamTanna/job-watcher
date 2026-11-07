@@ -1,0 +1,122 @@
+# Job watcher config. Edit this file to change what gets watched.
+#
+# Global filters apply to every company unless the company sets its own
+# `filters:` block (company keys override global keys one by one).
+# Matching is case-insensitive and on whole words. A title like
+# "Analyst/Senior Analyst" matches if either level passes on its own.
+
+filters:
+  include_keywords:     # title must contain at least one of these
+    - analyst
+    - associate
+    - strategy
+    - consultant
+    - business operations
+    - management consulting
+    - strategy consulting
+    - operations
+    - business analyst
+    - management consultant
+    - business strategy
+    - decision analytics
+    - decision
+
+  exclude_keywords:     # title must contain none of these
+    - senior
+    - sr
+    - lead
+    - manager
+    - director
+    - principal
+    - partner
+    - vice president
+    - head
+    - supervisor
+
+  locations:            # location must contain one of these (blank location = kept)
+    - india
+    - mumbai
+    - pune
+    - bengaluru
+    - bangalore
+    - gurugram
+    - gurgaon
+    - delhi
+    - noida
+    - hyderabad
+    - chennai
+    - kolkata
+    - remote
+
+companies:
+  # ZS: iCIMS Jibe site with a public JSON API. Verified live Nov 2026 (289 jobs, global).
+  - name: ZS
+    source: jibe
+    url: https://jobs.zs.com
+
+  # Kearney: Yello job board. Verified live Nov 2026 (173 jobs, global, 7 pages).
+  - name: Kearney
+    source: yello
+    url: https://kearney.recsolu.com/job_boards/EPd41qlA4_03IncZMnWyRQ
+
+  # Alvarez & Marsal: Talemetry/Jobvite site. Verified live Nov 2026 (145 India jobs).
+  - name: Alvarez & Marsal
+    source: talemetry
+    url: https://careers.alvarezandmarsal.com
+    params:
+      location: India
+
+  # L.E.K. Consulting: Oleeo board for Asia. Verified live Nov 2026 (12 jobs).
+  - name: L.E.K. Consulting
+    source: oleeo
+    url: https://lek.tal.net/vx/lang-en-GB/mobile-0/appcentre-3/brand-2/candidate/jobboard/vacancy/5/adv/
+
+  # BearingPoint: India open-roles page. Verified live Nov 2026 (9 jobs).
+  - name: BearingPoint
+    source: bearingpoint
+    url: https://www.bearingpoint.com/en-in/careers/open-roles/?country=IN
+
+  # FTI Consulting: Workday. The ?locationCountry=... part is Workday's India
+  # filter, copied from your link, so only India jobs come back.
+  # Not verifiable from the build environment: confirm with --dry-run.
+  - name: FTI Consulting
+    source: workday
+    url: https://fticonsulting.wd108.myworkdayjobs.com/FTIConsultingCareers?locationCountry=c4f78be1a8f14da0ab49ce1162348a5e
+    max_pages: 15
+
+  # Marsh: careers.marsh.com is a front end for Marsh McLennan's Workday tenant,
+  # which also lists Mercer, Oliver Wyman and Guy Carpenter roles.
+  # Same India filter as FTI (Workday country IDs are shared across tenants;
+  # if this tenant rejects it, the run retries unfiltered and filters locally).
+  # The tenant is huge, so server-side searches keep it to a few requests.
+  # Not verifiable from the build environment: confirm with --dry-run.
+  - name: Marsh McLennan
+    source: workday
+    url: https://mmc.wd1.myworkdayjobs.com/MMC?locationCountry=c4f78be1a8f14da0ab49ce1162348a5e
+    search: [analyst, associate, consultant, strategy]
+    max_pages: 5
+
+  # BCG: Phenom site. The page ignores URL filters (always 941 jobs global,
+  # 112 in India, Nov 2026), so the adapter asks Phenom's public /widgets
+  # endpoint for India only. If that call fails it falls back to keyword
+  # searches on the page. The widgets call is unverified from the build
+  # environment: confirm with --dry-run (expect ~100+ listed).
+  - name: BCG
+    source: phenom
+    url: https://careers.bcg.com/global/en
+    facets:
+      country: [India]
+    search: [associate, analyst, consultant]
+
+  # McKinsey and Bain are NOT watched. Both serve their job lists from APIs
+  # that refuse automated access (Bain answers "Direct API access is not
+  # allowed"; McKinsey's sits behind bot protection). Their pages only
+  # render the first 10-20 roles. Use their own job alerts instead:
+  #   McKinsey: create a profile on mckinsey.com/careers and save a search alert
+  #   Bain:     bain.com/careers/find-a-role -> sign up for job alerts
+
+  # Grant Thornton Bharat (gtprod.talentrecruit.com) is NOT watched.
+  # Its career page loads jobs from a private, token-authenticated and
+  # encrypted API. There's no stable public endpoint to read, so set up
+  # the native job alert on that page, or a LinkedIn/Naukri alert for
+  # "Grant Thornton Bharat".
