@@ -1,5 +1,7 @@
 # Job Watcher
 
+**Status: live since 8 Nov 2026.** Runs daily at 08:47 IST and watches 7 consulting and advisory firms (ZS, Kearney, L.E.K., BearingPoint, FTI, Marsh McLennan incl. Oliver Wyman, BCG). Portfolio facts and charts are in [`portfolio/`](portfolio/).
+
 A scheduled pipeline that checks company job portals every morning, filters openings against role, seniority and location rules, and sends an alert only for postings it hasn't seen before. It runs free on GitHub Actions, with no server or database. Every posting it observes is logged, so over time it also builds a dataset of hiring activity per company.
 
 ```mermaid
