@@ -59,12 +59,17 @@ companies:
     source: yello
     url: https://kearney.recsolu.com/job_boards/EPd41qlA4_03IncZMnWyRQ
 
-  # Alvarez & Marsal: Talemetry/Jobvite site. Verified live Nov 2026 (145 India jobs).
+  # Alvarez & Marsal: Talemetry/Jobvite site. The endpoint works from a normal
+  # connection (145 India jobs, Nov 2026) but returns 403 to GitHub Actions
+  # servers, so it's switched off. Use A&M's own job alerts at
+  # careers.alvarezandmarsal.com. Set enabled: true if you run the watcher
+  # from your own machine instead.
   - name: Alvarez & Marsal
     source: talemetry
     url: https://careers.alvarezandmarsal.com
     params:
       location: India
+    enabled: false
 
   # L.E.K. Consulting: Oleeo board for Asia. Verified live Nov 2026 (12 jobs).
   - name: L.E.K. Consulting
