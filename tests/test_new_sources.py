@@ -119,6 +119,49 @@ def test_workday_retries_without_rejected_facets():
     assert len(s.calls) == 2
 
 
+WD_FACETS = [  # shape of Workday's facet tree: country nested under a location group
+    {"facetParameter": "jobFamilyGroup", "values": [{"descriptor": "Consulting", "id": "jf1", "count": 9}]},
+    {"facetParameter": "locationMainGroup", "values": [
+        {"facetParameter": "Location_Country", "descriptor": "Country", "values": [
+            {"descriptor": "Germany", "id": "de1", "count": 40},
+            {"descriptor": "India", "id": "in42", "count": 77}]},
+        {"facetParameter": "locations", "descriptor": "Locations", "values": [
+            {"descriptor": "Mumbai - One World Center", "id": "loc9", "count": 30}]}]},
+]
+
+
+def test_find_facet_prefers_country_parameter():
+    assert workday.find_facet(WD_FACETS, "India") == ("Location_Country", "in42")
+    assert workday.find_facet(WD_FACETS, "india") == ("Location_Country", "in42")
+    assert workday.find_facet(WD_FACETS, "Atlantis") is None
+
+
+def test_workday_country_lookup_then_filtered_search():
+    api = "https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs"
+
+    def handler(kw):
+        if kw["json"]["limit"] == 1:
+            return FakeResponse({"total": 5000, "facets": WD_FACETS, "jobPostings": []})
+        assert kw["json"]["appliedFacets"] == {"Location_Country": ["in42"]}
+        return FakeResponse({"total": 1, "jobPostings": [
+            {"title": "Oliver Wyman - Associate", "externalPath": "/job/Gurugram---Horizon/OW-Associate_R1",
+             "locationsText": "2 Locations", "bulletFields": ["R1"]}]})
+
+    s = FakeSession({api: handler})
+    jobs = workday.fetch({"name": "MMC", "url": "https://mmc.wd1.myworkdayjobs.com/MMC", "country": "India"}, s)
+    assert [j.job_id for j in jobs] == ["R1"]
+    assert jobs[0].location == ""  # portal filtered to India, so multi-location is kept
+
+
+def test_workday_unfiltered_multi_location_uses_primary_office():
+    api = "https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs"
+    s = FakeSession({api: {"total": 1, "jobPostings": [
+        {"title": "Placement Analyst", "externalPath": "/job/Clearwater---Starcrest/Placement-Analyst_R_358750",
+         "locationsText": "2 Locations", "bulletFields": ["R_358750"]}]}})
+    jobs = workday.fetch({"name": "MMC", "url": "https://mmc.wd1.myworkdayjobs.com/MMC"}, s)
+    assert jobs[0].location == "Clearwater - Starcrest"  # so the India filter can now drop it
+
+
 def test_workday_multiple_search_terms_are_deduplicated():
     api = "https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs"
 

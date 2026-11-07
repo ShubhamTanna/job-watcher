@@ -78,7 +78,7 @@ companies:
 
   # FTI Consulting: Workday. The ?locationCountry=... part is Workday's India
   # filter, copied from your link, so only India jobs come back.
-  # Not verifiable from the build environment: confirm with --dry-run.
+  # Verified on GitHub Actions Nov 2026 (filter accepted).
   - name: FTI Consulting
     source: workday
     url: https://fticonsulting.wd108.myworkdayjobs.com/FTIConsultingCareers?locationCountry=c4f78be1a8f14da0ab49ce1162348a5e
@@ -86,21 +86,20 @@ companies:
 
   # Marsh: careers.marsh.com is a front end for Marsh McLennan's Workday tenant,
   # which also lists Mercer, Oliver Wyman and Guy Carpenter roles.
-  # Same India filter as FTI (Workday country IDs are shared across tenants;
-  # if this tenant rejects it, the run retries unfiltered and filters locally).
+  # This tenant rejected FTI's India filter id (HTTP 400), so `country:` makes
+  # the adapter look up this tenant's own India filter from Workday's response.
   # The tenant is huge, so server-side searches keep it to a few requests.
-  # Not verifiable from the build environment: confirm with --dry-run.
   - name: Marsh McLennan
     source: workday
-    url: https://mmc.wd1.myworkdayjobs.com/MMC?locationCountry=c4f78be1a8f14da0ab49ce1162348a5e
+    url: https://mmc.wd1.myworkdayjobs.com/MMC
+    country: India
     search: [analyst, associate, consultant, strategy]
     max_pages: 5
 
   # BCG: Phenom site. The page ignores URL filters (always 941 jobs global,
   # 112 in India, Nov 2026), so the adapter asks Phenom's public /widgets
   # endpoint for India only. If that call fails it falls back to keyword
-  # searches on the page. The widgets call is unverified from the build
-  # environment: confirm with --dry-run (expect ~100+ listed).
+  # searches on the page. Verified on GitHub Actions Nov 2026 (112 listed).
   - name: BCG
     source: phenom
     url: https://careers.bcg.com/global/en

@@ -17,7 +17,8 @@ LIMIT = 100
 
 def _location(d: dict) -> str:
     """Primary + additional locations, with countries so 'india' filters work."""
-    parts = [d.get("full_location") or d.get("short_location") or d.get("location_name") or ""]
+    raw = d.get("full_location") or d.get("short_location") or d.get("location_name") or ""
+    parts = ["; ".join(dict.fromkeys(p.strip() for p in raw.split(";") if p.strip()))]  # dedupe
     countries = {d.get("country", "")}
     for extra in d.get("additional_locations") or []:
         countries.add(extra.get("country", ""))
