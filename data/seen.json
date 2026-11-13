@@ -2,38 +2,38 @@
  "companies": {
   "BCG": {
    "first_run": "2026-11-07",
-   "last_listed": 112,
-   "last_run": "2026-11-12"
+   "last_listed": 111,
+   "last_run": "2026-11-13"
   },
   "BearingPoint": {
    "first_run": "2026-11-07",
    "last_listed": 10,
-   "last_run": "2026-11-12"
+   "last_run": "2026-11-13"
   },
   "FTI Consulting": {
    "first_run": "2026-11-07",
    "last_listed": 2,
-   "last_run": "2026-11-12"
+   "last_run": "2026-11-13"
   },
   "Kearney": {
    "first_run": "2026-11-07",
    "last_listed": 165,
-   "last_run": "2026-11-12"
+   "last_run": "2026-11-13"
   },
   "L.E.K. Consulting": {
    "first_run": "2026-11-07",
    "last_listed": 12,
-   "last_run": "2026-11-12"
+   "last_run": "2026-11-13"
   },
   "Marsh McLennan": {
    "first_run": "2026-11-07",
    "last_listed": 74,
-   "last_run": "2026-11-12"
+   "last_run": "2026-11-13"
   },
   "ZS": {
    "first_run": "2026-11-07",
-   "last_listed": 277,
-   "last_run": "2026-11-12"
+   "last_listed": 278,
+   "last_run": "2026-11-13"
   }
  },
  "jobs": {
@@ -152,6 +152,7 @@
   "BCG::63446": "2026-11-12",
   "BCG::63480": "2026-11-12",
   "BCG::63545": "2026-11-12",
+  "BCG::63578": "2026-11-13",
   "BearingPoint::T7802230": "2026-11-07",
   "BearingPoint::T8173362": "2026-11-07",
   "BearingPoint::T8267529": "2026-11-07",
@@ -162,6 +163,7 @@
   "BearingPoint::T8578432": "2026-11-07",
   "BearingPoint::T8578508": "2026-11-07",
   "BearingPoint::T8703827": "2026-11-12",
+  "BearingPoint::T8712126": "2026-11-13",
   "FTI Consulting::JR261039": "2026-11-07",
   "FTI Consulting::JR261601": "2026-11-07",
   "Kearney::-t5dB5BQAmoZ_r5EZBECqA": "2026-11-07",
@@ -371,6 +373,7 @@
   "Marsh McLennan::R_351761": "2026-11-07",
   "Marsh McLennan::R_352748": "2026-11-07",
   "Marsh McLennan::R_353729": "2026-11-07",
+  "Marsh McLennan::R_355102": "2026-11-13",
   "Marsh McLennan::R_355671": "2026-11-07",
   "Marsh McLennan::R_356477": "2026-11-07",
   "Marsh McLennan::R_357169": "2026-11-07",
@@ -388,6 +391,8 @@
   "Marsh McLennan::R_361656": "2026-11-07",
   "Marsh McLennan::R_361657": "2026-11-07",
   "Marsh McLennan::R_361803": "2026-11-07",
+  "Marsh McLennan::R_362408": "2026-11-13",
+  "Marsh McLennan::R_362898": "2026-11-13",
   "Marsh McLennan::R_363206": "2026-11-07",
   "Marsh McLennan::R_363319": "2026-11-07",
   "Marsh McLennan::R_363780": "2026-11-07",
@@ -419,7 +424,9 @@
   "Marsh McLennan::R_367303": "2026-11-11",
   "Marsh McLennan::R_367833": "2026-11-07",
   "Marsh McLennan::R_368147": "2026-11-07",
+  "Marsh McLennan::R_368152": "2026-11-13",
   "Marsh McLennan::R_368416": "2026-11-07",
+  "Marsh McLennan::R_368451": "2026-11-13",
   "Marsh McLennan::R_368653": "2026-11-11",
   "Marsh McLennan::R_369252": "2026-11-07",
   "Marsh McLennan::R_369318": "2026-11-12",
@@ -440,6 +447,7 @@
   "Marsh McLennan::R_371165": "2026-11-07",
   "Marsh McLennan::R_371181": "2026-11-07",
   "Marsh McLennan::R_371424": "2026-11-11",
+  "Marsh McLennan::R_372471": "2026-11-13",
   "ZS::21279": "2026-11-07",
   "ZS::21662": "2026-11-07",
   "ZS::22158": "2026-11-07",
@@ -518,6 +526,7 @@
   "ZS::32114": "2026-11-07",
   "ZS::32127": "2026-11-07",
   "ZS::32570": "2026-11-07",
+  "ZS::32651": "2026-11-13",
   "ZS::32702": "2026-11-07",
   "ZS::32703": "2026-11-07",
   "ZS::32704": "2026-11-07",
@@ -746,6 +755,7 @@
   "ZS::69584": "2026-11-12",
   "ZS::69590": "2026-11-12",
   "ZS::69591": "2026-11-12",
-  "ZS::69592": "2026-11-12"
+  "ZS::69592": "2026-11-12",
+  "ZS::69594": "2026-11-13"
  }
 }
