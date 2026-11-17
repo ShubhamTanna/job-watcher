@@ -2,13 +2,13 @@
  "companies": {
   "BCG": {
    "first_run": "2026-11-07",
-   "last_listed": 111,
-   "last_run": "2026-11-16"
+   "last_listed": 113,
+   "last_run": "2026-11-17"
   },
   "BearingPoint": {
    "first_run": "2026-11-07",
-   "last_listed": 10,
-   "last_run": "2026-11-16"
+   "last_listed": 13,
+   "last_run": "2026-11-17"
   },
   "FTI Consulting": {
    "first_run": "2026-11-07",
@@ -17,13 +17,13 @@
   },
   "Kearney": {
    "first_run": "2026-11-07",
-   "last_listed": 165,
-   "last_run": "2026-11-16"
+   "last_listed": 164,
+   "last_run": "2026-11-17"
   },
   "L.E.K. Consulting": {
    "first_run": "2026-11-07",
    "last_listed": 12,
-   "last_run": "2026-11-16"
+   "last_run": "2026-11-17"
   },
   "Marsh McLennan": {
    "first_run": "2026-11-07",
@@ -32,8 +32,8 @@
   },
   "ZS": {
    "first_run": "2026-11-07",
-   "last_listed": 277,
-   "last_run": "2026-11-16"
+   "last_listed": 274,
+   "last_run": "2026-11-17"
   }
  },
  "jobs": {
@@ -157,6 +157,9 @@
   "BCG::64007": "2026-11-16",
   "BCG::64041": "2026-11-16",
   "BCG::64075": "2026-11-16",
+  "BCG::64238": "2026-11-17",
+  "BCG::64370": "2026-11-17",
+  "BCG::64404": "2026-11-17",
   "BearingPoint::T7802230": "2026-11-07",
   "BearingPoint::T8173362": "2026-11-07",
   "BearingPoint::T8267529": "2026-11-07",
@@ -168,6 +171,9 @@
   "BearingPoint::T8578508": "2026-11-07",
   "BearingPoint::T8703827": "2026-11-12",
   "BearingPoint::T8712126": "2026-11-13",
+  "BearingPoint::T8746632": "2026-11-17",
+  "BearingPoint::T8746707": "2026-11-17",
+  "BearingPoint::T8747773": "2026-11-17",
   "FTI Consulting::JR261039": "2026-11-07",
   "FTI Consulting::JR261601": "2026-11-07",
   "Kearney::-t5dB5BQAmoZ_r5EZBECqA": "2026-11-07",
@@ -250,6 +256,7 @@
   "Kearney::OyTU8cvputAEIwT5sGBFSA": "2026-11-07",
   "Kearney::PGYt2oWYR9-hT7MmcC9OXA": "2026-11-07",
   "Kearney::Pc5tB7Pnk9Z8g51Lr7oSLQ": "2026-11-07",
+  "Kearney::Q-mlQENatbiCZgg2OncIQg": "2026-11-17",
   "Kearney::QUNcjP70QLHGl5gx3uhT0g": "2026-11-07",
   "Kearney::QXICHV94Evae4120TamQSg": "2026-11-07",
   "Kearney::QbAU81UQlaE5t7AzYHuZWQ": "2026-11-07",
@@ -264,6 +271,7 @@
   "Kearney::UaUdS0Am-aP5a6Ir0ov9zQ": "2026-11-07",
   "Kearney::UjZh24-KSd2GT59vXI8xNA": "2026-11-07",
   "Kearney::UrXp7YIaU3tklQ-4bU2GnA": "2026-11-07",
+  "Kearney::V0-8K9y9_6OdxfB4aAicYw": "2026-11-17",
   "Kearney::VQsPEddh-6ULGpXV19pNGA": "2026-11-07",
   "Kearney::VVljvb90gcnlO3OcI1PI9Q": "2026-11-07",
   "Kearney::Vu4_cd5oKCY5uxyHl0KQ1w": "2026-11-07",
@@ -765,6 +773,8 @@
   "ZS::69590": "2026-11-12",
   "ZS::69591": "2026-11-12",
   "ZS::69592": "2026-11-12",
-  "ZS::69594": "2026-11-13"
+  "ZS::69594": "2026-11-13",
+  "ZS::70091": "2026-11-17",
+  "ZS::70200": "2026-11-17"
  }
 }
