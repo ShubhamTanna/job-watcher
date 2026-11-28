@@ -3,12 +3,12 @@
   "BCG": {
    "first_run": "2026-11-07",
    "last_listed": 124,
-   "last_run": "2026-11-27"
+   "last_run": "2026-11-28"
   },
   "BearingPoint": {
    "first_run": "2026-11-07",
    "last_listed": 15,
-   "last_run": "2026-11-27"
+   "last_run": "2026-11-28"
   },
   "FTI Consulting": {
    "first_run": "2026-11-07",
@@ -17,13 +17,13 @@
   },
   "Kearney": {
    "first_run": "2026-11-07",
-   "last_listed": 164,
-   "last_run": "2026-11-27"
+   "last_listed": 163,
+   "last_run": "2026-11-28"
   },
   "L.E.K. Consulting": {
    "first_run": "2026-11-07",
    "last_listed": 13,
-   "last_run": "2026-11-27"
+   "last_run": "2026-11-28"
   },
   "Marsh McLennan": {
    "first_run": "2026-11-07",
@@ -32,8 +32,8 @@
   },
   "ZS": {
    "first_run": "2026-11-07",
-   "last_listed": 280,
-   "last_run": "2026-11-27"
+   "last_listed": 276,
+   "last_run": "2026-11-28"
   }
  },
  "jobs": {
